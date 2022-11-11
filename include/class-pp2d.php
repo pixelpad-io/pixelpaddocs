@@ -165,7 +165,7 @@ class Docs {
     }
 
     public function enqueueStyle() {
-        wp_enqueue_style("pp2d", get_template_directory_uri() . "/pixelpaddocs/includes/style.css", array(), PIXELPAD_VERSION, "all");
+        wp_enqueue_style("pp2d", get_template_directory_uri() . "/pixelpaddocs/include/style.css", array(), PIXELPAD_VERSION, "all");
 
         if (!empty($_GET["nonav"])) { ?>
             <style>
