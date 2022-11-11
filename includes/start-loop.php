@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace THEME;
 
@@ -10,18 +10,10 @@ In Python, any variable declared within any function belongs only to that functi
 like in the case of using a variable across start() or loop(), you must declare that this variable belongs to the class by using 
 the self. parameter.";
 $parameters = array(
-                "self.variable" => "Declares the variable belongs to the class, and can be accessed in both the start and the loop scripts.",
-              );
-    
+    "self.variable" => "Declares the variable belongs to the class, and can be accessed in both the start and the loop scripts.",
+);
+
 $return = "The variable used in both the start and loop";
 $example = "";
 
 Docs::renderSyntaxTemplate($function, $description, $parameters, $return, "startloop");
-
-
-
-
-
-
-
-

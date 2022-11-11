@@ -161,11 +161,58 @@ class Docs {
             </div>
         </div>
 
-        <?php
+    <?php
     }
 
-    public function enqueueStyle() {
-        wp_enqueue_style("pp2d", get_template_directory_uri() . "/pixelpaddocs/include/style.css", array(), PIXELPAD_VERSION, "all");
+    public function enqueueStyle() { ?>
+        <style>
+            .doc-code {
+                color: white;
+                background: #0a0a0a;
+                font-family: monospace;
+                padding: 1rem;
+            }
+
+            .sidebar-parent {
+                position: fixed;
+                top: 4rem;
+                bottom: 0;
+            }
+
+            .sidebar-inner {
+                overflow-x: hidden;
+                overflow-y: hidden;
+            }
+
+            .sidebar-inner:hover {
+                overflow-y: auto;
+            }
+
+            #docs-main {
+                top: 4rem;
+                /*account for navbar*/
+
+            }
+
+            .sidebar-inner .active {
+                background: #E85DB6;
+                color: white;
+            }
+
+            .sidebar-inner a {
+                color: #343a40;
+            }
+
+            #footer {
+                margin-top: 4rem;
+            }
+
+            iFrame {
+                border: none;
+            }
+        </style>
+
+        <?php
 
         if (!empty($_GET["nonav"])) { ?>
             <style>
