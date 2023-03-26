@@ -73,6 +73,6 @@
             The asset library is accessed by clicking on the plus (+) button within the assets panel for sprites and sounds. The asset library has
             free to use sprites you can use for your application. You can also upload your own assets by clicking the upload icon within the library.
         </div>
-        <img class="w-100" src="<?= get_template_directory_uri() . "/pixelpaddocs/includes/media/assetmenus.png" ?>">
+        <img class="w-100" src="https://s3.us-west-1.amazonaws.com/media.pixelpad.io/assetmenus.png">
     </div>
 </div>
