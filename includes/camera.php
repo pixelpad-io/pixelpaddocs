@@ -51,6 +51,15 @@ $return = "Camera's current Y position";
 Docs::renderSyntaxTemplate($function, $description, $parameters, $return, "get_camera_y");
 
 
+//get_camera_y()
+$function = "zoom_camera(zoom: float) -> float";
+$description = "Get the camera's current y coordinate";
+$parameters = array("zoom" => "How much to zoom the camera. A value of 2 will zoom the camera in by 2x");
+$return = "Camera's current zoom value";
+Docs::renderSyntaxTemplate($function, $description, $parameters, $return, "zoom_camera");
+
+
+
 //summary
 $title = "Camera";
 $summary = <<<EOT
