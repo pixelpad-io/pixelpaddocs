@@ -3,8 +3,10 @@
 namespace THEME;
 
 //new_sprite
-$function = "sprite(name: str[, rows: int, cols: int]) -> sprite";
-$description = "Loads a sprite asset.";
+$function = "sprite(name: str[, rows: int, cols: int]) -> sprite
+<br>
+new_sprite(name: str[, rows: int, cols: int]) -> sprite";
+$description = "Loads a sprite asset and sets the sprite asset to the object.";
 $parameters = array(
     "name" => "The name of a sprite to load, as a string.",
     "rows" => "If the sprite asset is a sprite sheet, the number of rows in the sprite sheet. Default: 1",
