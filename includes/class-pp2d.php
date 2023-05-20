@@ -2,6 +2,8 @@
 
 namespace THEME;
 
+use BLUEPRINT\ThemeOptions;
+
 class Docs {
 
     public function render() {
@@ -43,8 +45,8 @@ class Docs {
 
         <div class="my_docs_dashboard container-fluid">
             <?php
-            global $region;
-            $region->render_navbar();
+            $navbar = new Navbar();
+            $navbar->render_navbar();
             ?>
             <div class="row navbar-expand-sm">
                 <div class="col-sm-2 col-12 bg-light sidebar-parent p-0 collapse navbar-collapse" id="sidebarContent" style="z-index:100;">
@@ -84,7 +86,7 @@ class Docs {
     public static function renderSummaryTemplate($title, $summary, $img = null, $functionName = null) {
         $example = "";
         if ($functionName != null) {
-            $example = json_decode(Functions::pixelpad_get_theme_setting("docs"))->{$functionName};
+            $example = json_decode(ThemeOptions::pixelpad_get_theme_setting("docs"))->{$functionName};
         } ?>
         <div class="row">
             <div class="col-12">
@@ -112,7 +114,7 @@ class Docs {
 
     public static function renderSyntaxTemplate($function, $description, $parameters, $return, $functionName) {
         if ($functionName != null) {
-            $postid = json_decode(Functions::pixelpad_get_theme_setting("docs"))->{$functionName};
+            $postid = json_decode(ThemeOptions::pixelpad_get_theme_setting("docs"))->{$functionName};
             //can hardcode postid; but this makes it easier to change 
         } ?>
         <div class="row mb-5">
