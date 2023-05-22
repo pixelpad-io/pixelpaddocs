@@ -46,6 +46,7 @@ class Docs {
         <div class="my_docs_dashboard container-fluid">
             <?php
             $navbar = new Navbar();
+            $navbar->homeLink = "/";
             $navbar->render_navbar();
             ?>
             <div class="row navbar-expand-sm">
@@ -86,7 +87,8 @@ class Docs {
     public static function renderSummaryTemplate($title, $summary, $img = null, $functionName = null) {
         $example = "";
         if ($functionName != null) {
-            $example = json_decode(ThemeOptions::pixelpad_get_theme_setting("docs"))->{$functionName};
+            $themeOptions = Functions::getThemeOptions();
+            $example = json_decode($themeOptions->pixelpad_get_theme_setting("docs"))->{$functionName};
         } ?>
         <div class="row">
             <div class="col-12">
@@ -114,7 +116,8 @@ class Docs {
 
     public static function renderSyntaxTemplate($function, $description, $parameters, $return, $functionName) {
         if ($functionName != null) {
-            $postid = json_decode(ThemeOptions::pixelpad_get_theme_setting("docs"))->{$functionName};
+            $themeOptions = Functions::getThemeOptions();
+            $postid = json_decode($themeOptions->pixelpad_get_theme_setting("docs"))->{$functionName};
             //can hardcode postid; but this makes it easier to change 
         } ?>
         <div class="row mb-5">
