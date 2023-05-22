@@ -46,7 +46,6 @@ class Docs {
         <div class="my_docs_dashboard container-fluid">
             <?php
             $navbar = new Navbar();
-            $navbar->homeLink = "/";
             $navbar->render_navbar();
             ?>
             <div class="row navbar-expand-sm">
